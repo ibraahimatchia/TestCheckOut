@@ -1,0 +1,63 @@
+﻿<header>
+    <div class="content-wrapper">
+        <div class="float-left">
+            <p class="site-title">
+                <a href="~/">ASP.NET Web API</a></p>
+        </div>
+    </div>
+</header>
+<div id="body">
+
+    <table id="Stationery">
+        <tr>
+            <th>Name</th>
+            <th>Color</th>
+            <th>Quantity</th>
+        </tr>
+    </table>
+
+    <form id="AddStationeryForm" method="post">
+        <h3>Create a new Stationery</h3>
+        <p>
+            <label for="StationeryName">Stationery Name:</label>
+            <input type="text" name="Name" />
+        </p>
+        <p>
+            <label for="StaioneryColor">Stationery Color:</label>
+            <input type="text" name="Color" />
+        </p>
+        <p>
+            <label for="StaioneryQuantity">Stationery Quantity:</label>
+            <input type="text" name="Quantity" />
+        </p>
+
+        <input type="button" id="saveStationery" value="Save" />
+    </form>
+    
+</div>
+
+@section scripts{
+<script type="text/javascript">
+    $(function () {
+        $.getJSON('/api/Stationery', function (contactsJsonPayload) {
+            $(contactsJsonPayload).each(function (i, item) {
+                $('#Stationery').append('<tr><td>' + item.Name + '</td><td>' + item.Color + '</td><td>' + item.Quantity + '</td></tr>');
+            });
+        });
+    });
+
+    $('#saveStationery').click(function () {
+        $.post("api/Stationery",
+              $("#AddStationeryForm").serialize(),
+              function (value) {
+                  $('#Stationery').append('<tr><td>' + value.Name + '</td><td>' + value.Color + '</td><td>' + value.Quantity + '</td></tr>');
+              },
+              "json"
+        );
+    });
+
+
+
+
+</script>
+}

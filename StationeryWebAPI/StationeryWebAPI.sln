@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StationeryWebAPI", "StationeryWebAPI\StationeryWebAPI.csproj", "{D7D8E1AB-B5D4-4030-8588-B59E651DFDF2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D7D8E1AB-B5D4-4030-8588-B59E651DFDF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7D8E1AB-B5D4-4030-8588-B59E651DFDF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7D8E1AB-B5D4-4030-8588-B59E651DFDF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7D8E1AB-B5D4-4030-8588-B59E651DFDF2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
